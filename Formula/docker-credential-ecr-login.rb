@@ -2,13 +2,13 @@ require 'formula'
 require 'tmpdir'
 
 class DockerCredentialEcrLogin < Formula
-  VERSION = 'e04cbc84e17384bc38584868fc0529e41859c207'
+  VERSION = '19c5038b3c1fc63328b4eb99c507c72f12a27f66'
 
-  homepage 'https://github.com/sentientmonkey/amazon-ecr-credential-helper'
-  # url "https://github.com/sentientmonkey/amazon-ecr-credential-helper/archive/#{VERSION}.tar.gz"
-  # sha256 'b7e01deb04d11a561d88a70e2c47f4aa83901daba77b5d1973744f4efc98eda5'
+  homepage 'https://github.com/awslabs/amazon-ecr-credential-helper'
+  url "https://github.com/awslabs/amazon-ecr-credential-helper/archive/#{VERSION}.tar.gz"
+  sha256 'f5bcc481812942d3314e38c2406b881c74ad0dabcb69707a0f7c55cdc95d1828'
   version VERSION
-  head 'https://github.com/sentientmonkey/amazon-ecr-credential-helper.git', :branch => 'implement-helper-list'
+  head 'https://github.com/awslabs/amazon-ecr-credential-helper.git', :branch => 'master'
   depends_on 'go' => :build
 
   def install
